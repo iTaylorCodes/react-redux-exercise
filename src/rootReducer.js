@@ -11,8 +11,9 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
         ...state,
         memes: state.memes.filter((meme) => meme.id !== action.id),
       };
+    default:
+      return state;
   }
-  return state;
 };
 
 export default rootReducer;
